@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0%;
+}
+
+body {
+    overflow: hidden;
+    background: #000000;
+    height: 100vh;
+}
+
+span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    background: url(heart.png.png);
+    background-size: cover;
+    animation: heart 5s linear infinite;
+}
+
+@keyframes heart {
+    0%{
+        transform: translate(-50%, -50%);
+        opacity: 1;
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        transform: translate(-50%, -1500%);
+        opacity: 0;
+        filter: hue-rotate(900deg);
+    }
+}
